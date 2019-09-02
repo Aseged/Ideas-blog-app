@@ -1,0 +1,176 @@
+﻿
+/*this CSS file is only to style the login and register forms. it will eventually be used to style all forms*/
+.formContainer 
+{
+    width:49%;
+    height:100%;
+    margin-top:10px;
+    display:inline-block;
+    background-color: #e67e22;
+    vertical-align:top;
+    }
+    
+#formContainer1 
+{
+  -webkit-border-top-right-radius: 20px;
+-moz-border-radius-topright: 20px;
+border-top-right-radius: 20px;
+float:left;
+margin-right:6px;
+margin-left:6px;
+    }
+#formContainer1 h2
+{
+    font-family:Corbert, Lintel, Georgia, Verdana, Lucida Grande, Lucida Sans, "Times New Roman", Times,  san-serif;
+    color: #fff;
+    text-align: right;
+	float:right;
+
+}
+#addressWrapper{
+        width: 70%;
+        height: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+    }
+    
+#formContainer2 
+{
+-webkit-border-top-left-radius: 20px;
+-moz-border-radius-topleft: 20px;
+border-top-left-radius: 20px;
+margin-right: 2px;
+
+
+    }
+#formContainer1 h3 
+{
+    font-family: Corbert, Lintel, Georgia, Verdana, Lucida Grande, Lucida Sans, "Times New Roman", Times,  san-serif;
+				text-decoration: none;
+				text-decoration: none;
+				text-align:right;
+    } 
+ #formContainer1 p 
+{
+    font-family: Corbert, Lintel, Georgia, Verdana, Lucida Grande, Lucida Sans, "Times New Roman", Times,  san-serif;
+				text-decoration: none;
+				text-decoration: none;
+				text-align:right;
+    }    
+    
+#formContainer1 h1
+{
+    font-family:Corbert, Lintel, Georgia, Verdana, Lucida Grande, Lucida Sans, "Times New Roman", Times,  san-serif;
+		text-decoration: none;
+		text-decoration: none;
+		text-align:right;
+		
+	}    
+
+
+#formContainer2 h3 
+{
+    font-family: Corbert, Corbel, Lintel, Georgia, Verdana, Lucida Grande, Lucida Sans, "Times New Roman", Times,  san-serif;
+				text-decoration: none;
+				text-decoration: none;
+				text-align:right;
+    } 
+   
+#sentEmail {
+	font-family: Corbert, Corbel, Lintel, Georgia, Verdana, Lucida Grande, Lucida Sans, "Times New Roman", Times,  san-serif;
+				text-decoration: none;
+				text-decoration: none;
+				text-align:right;
+				color:#00ff00;
+				font-size:1em;
+}
+
+
+/* Centre the form within the page */
+.formContainer2 {
+    margin-left: auto;
+        margin-right: auto;
+    width:100%;
+}
+
+
+/* Style the text boxes */
+#ContactForm{
+    width: 80%;
+    height: 60%;
+	float:center;
+	margin-left:20px;
+    margin-top: 60px;
+}
+#submit, #submitLog {
+    width:60%;
+	height: 12%;
+    font-size:1.4em;
+    font-family: Corbert, Corbel, Lintel, Georgia, Verdana, Lucida Grande, Lucida Sans, "Times New Roman", Times,  san-serif;
+    color:#ffffff;
+    background: #000000;
+    padding: 10px;
+	border:none;
+	margin:4px 0 0 -1px;
+}
+#GO {
+    width:106%;
+	height: 10%;
+	margin-top:6px;
+	background-color: #22A7F0;
+	color:#3a3a3a;
+}
+
+#submit:hover, #submitLog:hover {
+    background-color: #ffffff;
+font-size: 1.4em;
+color:#000000;
+-webkit-transition: all .8s ease-in-out; 
+-moz-transition: all .8s ease-in-out; 
+-ms-transition: all .8s ease-in-out; 
+-o-transition: all .8s ease-in-out; 
+transition: all .8s ease-in-out;
+      
+}
+#name, #email, #pass{
+    font-size:1.2em;
+    font-family: Corbert, Corbel, Lintel, Georgia, Verdana, Lucida Grande, Lucida Sans, "Times New Roman", Times,  san-serif;
+    color:#999999;
+    background: #fffbec;
+    border: 1px solid #fffbec;
+    padding: 10px;
+    margin-top:6px;	
+	
+}
+.validate {
+	margin:10px;
+	font-size:1.2em;
+	font-weight:bolder;
+    font-family: Corbert, Corbel, Lintel, Georgia, Verdana, Lucida Grande, Lucida Sans, "Times New Roman", Times,  san-serif;
+}
+
+textarea {
+	width:100%;
+	height: 60%;
+	margin-top:6px;
+}
+input {
+    	width:60%;
+	height:4%;
+}
+::-webkit-input-placeholder {
+   color: #999999;
+}
+
+:-moz-placeholder { 
+   color: #999999;
+}
+
+::-moz-placeholder {  
+   color: #999999; 
+}
+
+:-ms-input-placeholder {  
+   color: #999999;  
+}

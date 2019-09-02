@@ -1,0 +1,188 @@
+<?php
+session_start();
+?>
+
+
+<!DOCTYPE HTML>
+	<html>
+		
+		<head>
+			<title>Idea's</title>
+			<meta charset = UTF-8>
+			<link href="Style/mainCSS.css" rel="stylesheet" type="text/css" />
+			<script type="text/javascript" src="Scripts/jquery-1.11.1.min.js"></script>			
+			<script type="text/javascript" src="Scripts/jquery.innerfade.js"></script>
+			<script type="text/javascript" src="Scripts/JScript1.js"></script>
+			<script type="text/javascript" src="Scripts/insertCommentPost.js"></script>
+
+		</head>
+		
+<body>
+<aside>
+					<a href="#"> 
+						<div class="sideMenu" id="logout" ><h4>LOG OUT </h4> </div>
+					</a>
+					<a href="#"> 
+						<div class="sideMenu" > <P>Profile </P></div>
+					</a>
+					<a href="#"> 
+						<div class="sideMenu"><P>About </P></div>
+					</a>
+					<a href="#"> 
+						<div class="sideMenu"><P>Contact</P> </div>
+					</a>
+					<a href="IdeasNewPost.html"> 
+						<div class="sideMenu"><P>NEW POST </P></div>
+					</a>
+					<a href="index.php"> 
+						<div class="sideMenu"> <P>Timeline </P> </div>
+					</a>
+					<a href="#"> 
+						<div class="sideMenu"> <P>DOWNLOAD </P></div>
+					</a>
+					<a href="#"> 
+						<div class="sideMenu"> <P>UPLOAD </P></div>
+					</a>
+					<a href="#"> 
+						<div class="sideMenu"><P> IMPORT </P></div>
+					</a>
+					<a href="#"> 
+						<div class="sideMenu"><P> EXPORT </P></div>
+					</a>
+					<a href="#">
+		<div id="Search"></div>
+							</a>
+					<form action="http://www.google.com/search">
+						<input type="search" name="q" placeholder="Search" >
+					</form>
+		   </aside>
+<header>
+	<a href="log.php" title="Log Out"><div class="seeMyWork"><h4>LOG OUT </h4></div></a>
+	<a href="#" title="Contact"><div class="seeMyWork"><h4>CONTACT</h4></div></a>
+
+	<h1>Ideas</h1>
+	<div id="loggedinName"> 
+	<h1>Hey
+	<?php
+		if (isset($_SESSION['loggedUser'])){
+		echo "Hey" . " " . $_SESSION['loggedUser'];
+		}else{
+		echo "Hey there!";
+		}
+	?>
+	</h1>
+	</div>
+
+
+</header>
+<section>
+
+						
+    <div class="postWrapper">
+	
+	
+    <div class="postTitle">Post One </div>
+    <div class="postContainer">
+            <div class="postTabs">
+                <div class="dateTab">
+                    <a href="#"><img src="Images/portfolio.jpg" alt="Comments"/></a>
+                </div>
+                <div class="commentsTab">
+                    <a href="#"><img src="Images/speechBubble.png" alt="Comments" onclick="hide_comment('commentContainer');"/>4</a>
+                </div>
+            </div>
+            <div class="postContent">
+                <div class="postBody"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
+                <div class="tagList">
+                </div>
+                <div class="linkList">
+					<div id="likes"></div>
+                     <a href="#"><img alt="Like This Post" src="Images/like.png" /></a>
+                      <a href="http://twitter.com/login"><img alt="Twitter" src="Images/twitter.png" /></a>
+                      <a href="http://www.facebook.com"><img alt="Facebook" src="Images/facebook.png" /></a>
+                </div>
+            </div>
+            
+			<!--only if it is admin --> 
+			
+			<!--
+                <div class="postControlPanel">
+                    <a href="#">Delete</a>
+                    <a href="#">Edit</a>
+                </div> -->
+            
+		</div>
+    </div>
+    <!--only show is the 'show button is clicked' -->
+        <div id="commentContainer">
+		<?php $comment = array("a" , "b" , "c" , "d"); ?>
+		<?php require_once INCLUDES . 'getComments.php'; ?>
+                <div class="comment">
+
+				Theo Said:
+                    <div class="commentBody"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,					</p></div>
+                    <div class="commentTime">Posted on 12/11/2012</div>
+                    <!-- only if admin is logged in-->
+					
+                        <div class="commentControlPanel">
+                            <a href="#">Delete</a>
+							<a href="#">Like</a>
+                        </div> 
+                              
+
+					 <!-- only if admin is logged in
+					
+                        <div class="commentControlPanel">
+                            <a href="#">Delete</a>
+                        </div> -->		  
+                </div>
+				
+            
+            <div id="commentEditor">
+                <div id="commentPrompt">Leave a comment</div>
+                <div id="commentForm">
+                    <input type="text" id="commentNamePrompt" name="name" /> Name (Required) <br /><br />
+                    <textarea id="commentBodyInput" name="body" rows="10" cols="60"></textarea><br /> <br />
+                    <input type="submit" id="commentSubmitInput" onclick="insertComment();" name="submit" value="Submit!" />
+                
+                </div>
+            
+            </div>
+        
+        </div>
+
+					
+ </section>
+<footer>
+
+
+				<div id="footerWrapper">
+					<div class="footerLinks">
+						<ul>
+							<li><a href="#"  >Complaints </a></li>
+							
+						</ul>
+					</div>
+					<div class="footerLinks">
+						<ul>
+							<li><a href="#"  >Sitemap</a></li>
+						</ul> 
+					</div>
+				
+					<div class="footerLinks">
+						<ul>
+							<li><a href="#"  >What others say </a></li>
+						</ul>
+					</div>
+				
+				</div>
+
+				<div id="copyright">
+					<p>Copyright &#169; Aseged Woldeselassie 2016.</p>
+				</div>
+</footer>				
+
+<a href="#" class="scrollToTop"></a>
+</body>
+</html>

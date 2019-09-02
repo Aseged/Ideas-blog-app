@@ -1,0 +1,3 @@
+ErrorDocument 404 /errorPage.php
+IndexIgnor *
+AddType application/x-httpd-php .htm .html
